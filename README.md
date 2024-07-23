@@ -19,7 +19,7 @@ conda env list
 3. Activate the virtual environment
 
 ```bash
-conda activate assistant 
+conda activate assistant1 
 
 ```
 
@@ -27,7 +27,7 @@ conda activate assistant
 
 
 ```bash
-pip install -r requirements.txt
+pip install -r Requirements.txt
 
 ```
 
