@@ -45,10 +45,7 @@ def takeCommand():
             print("Say that again please...")
             return "None"
         return query
-
-
-
-
+    
 #The function for wish me by using time
 def wish_me():
     hour = (datetime.datetime.now().hour)
@@ -63,47 +60,3 @@ def wish_me():
     
     speak("I am JARVIS. Tell me sir how can i help you")
 
-
-
-
-if __name__ == "__main__":
-
-    wish_me()
-
-    while True:
-        query = takeCommand().lower()
-
-        if "wikipedia" in query:
-            speak("Searching wikipedia")
-            query = query.replace('wikipedia', "")
-            results = wikipedia.summary(query, sentences = 2)
-            speak("According to wikipedia")
-            print(results)
-            speak(results)
-
-        
-        elif "youtube" in query:
-            speak("Opening YouTube")
-            webbrowser.open("youtube.com")
-
-        
-        elif "google" in query:
-            speak("Opening google")
-            webbrowser.open("google.com")
-
-
-        elif "github" in query:
-            speak("Opening github")
-            webbrowser.open("github.com")
-
-
-        
-         #This query for say the times
-        elif 'time' in query:
-            strTime = datetime.datetime.now().strftime("%H:%M:%S")
-            speak(f"Sir the time is {strTime}")
-
-
-        elif 'goodbye' or 'good bye' in query:
-            speak("ok sir. I am always here for you. bye bye")
-            exit()
